@@ -1,4 +1,3 @@
-import os
 from flask import Flask, jsonify, request
 from flask_cors import cross_origin
 
@@ -21,4 +20,5 @@ def detect():
         
         return jsonify(detectObjects('images/dog123.jpeg'))
 
-app.run(port=int(os.environ.get("PORT", 5000)),host='0.0.0.0',debug=True)
+if __name__ == '__main__':
+    app.run()
